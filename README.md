@@ -41,7 +41,7 @@ pers_cons_distances = s.get_distances(c_dict, p_dict)
 
 ## 🖇 *Grapp* it up: log the data to Neo4j
 Once you're done with text processing, you need to log the data to Neo4j. **Grapp** is a module that helps you to deal with it:
-```\# initalize `Grapp` instance
+```\# initalize Grapp instance
 app = grapp.Grapp(uri, user, password)
 
 \# store Person nodes
