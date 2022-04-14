@@ -5,7 +5,10 @@ Oddhours is a resource for knowledge graph extraction from texts in order to cre
 ## Instructions
 To install and set up Oddhours run:
 
-`git clone https://github.com/chizhikchi/oddhours \ncd oddhours\npython -m venv .env\nsource .env/bin/activate\npip install -r requirements.txt`
+```git clone https://github.com/chizhikchi/oddhours 
+cd oddhours\npython -m venv .env
+source .env/bin/activate
+pip install -r requirements.txt```
 
 
 
