@@ -6,7 +6,8 @@ Oddhours is a resource for knowledge graph extraction from texts in order to cre
 To install and set up Oddhours run the following commands in your terminal:
 
 ```git clone https://github.com/chizhikchi/oddhours 
-cd oddhours\npython -m venv .env
+cd oddhours
+python -m venv .env
 source .env/bin/activate
 pip install -r requirements.txt
 ```
@@ -68,8 +69,8 @@ Knowledge graph is a data structure that can bring together literature and graph
 Just some simple examples to illustrate the potential of conceptual graphs for literature investigation:
 * You can find the most important ideas calculating *betwenness centrality* for the nodes.
 * Node clustering algorithms can show you how the text is structured
-* *Grapp* watches the frecuency of occurence for each relation: take a look at the weight of each link. 
+* *Grapp* watches the frequency of occurence for each relation: take a look at the weight of each link. 
 
 ## 🔍 An example: the relevance of night (noche) and dream (sueño) in Cortazar's **Deshoras**
-Here is an extract from a knowleghe graph from the text of one of Julio Cortazar's short stories. The size of each node depends on its betweennes centrality value and the darkness of line denotes the weight of each relationship. Long story short (in fact, short story shorter) night and dream are fundamental for the story's global economy, because the main character sees his beloved in dreams that materialize many years after in an unexpected encounter which clarifies the mutuality of his child's enthusiastic love that seemed frustrated. Here we can see that the graph underlines the importance of two concepts, making it possible to spot even in distant-readig scenario. 
+Here is an extract from a knowleghe graph from the text of one of Julio Cortazar's short stories. The size of each node depends on its betweennes centrality value and the darkness of line denotes the weight of each relationship. Long story short (in fact, short story shorter) night and dream are fundamental for the story's global economy, because the main character (Aníbal) sees his beloved (Sara) in dreams that materialize many years after in an unexpected encounter which clarifies the mutuality of his child's enthusiastic love that seemed frustrated. Here we can see that the graph underlines the importance of two concepts, making it possible to spot even in distant-readig scenario. 
 ![Sueño-noche](https://user-images.githubusercontent.com/80167197/163492929-a4e4df56-6657-41c9-96c4-35155d71a264.png)
