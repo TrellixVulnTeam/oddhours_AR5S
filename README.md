@@ -19,21 +19,22 @@ By converting the text into Oddhours' Story object, you can access to it's relev
 ```import story
 with open('text-files/Deshoras.txt', 'r') as file:
   text = file.read()
-\# define a list of characters of our story
+
+# define a list of characters of our story
 pers_list = ['Sara', 'Doro', 'Felisa', 'Aníbal']
 s = story.Story(text, characters=pers_list, distance_threshold=15)
 ```
 
 The next step is to perform matching and get the links that exist between the entities in the text:
 
-```\# get the matches of Story's relevant concepts 
+```# get the matches of Story's relevant concepts 
 c_dict = s.concept_matcher
 p_dict = s.person_matcher
 
-\# get list of relevant concepts detected in the text
+# get list of relevant concepts detected in the text
 concept_list = s.concepts.values()
 
-\# extract connections between characters and concepts
+# extract connections between characters and concepts
 pers_distances = s.get_distances(p_dict, p_dict)
 cons_distances = s.get_distances(c_dict, c_dict)
 pers_cons_distances = s.get_distances(c_dict, p_dict)
@@ -44,23 +45,24 @@ Once you're done with text processing, you need to log the data to Neo4j. **Grap
 ```\# initalize Grapp instance
 app = grapp.Grapp(uri, user, password)
 
-\# store Person nodes
+# store Person nodes
 for p in pers_list:
   app.create_person(p)
 
-\# store Concept nodes
+# store Concept nodes
 for c in set(concept_list):
   app.create_concept(c)
 
-\# create relations 
+# create relations 
 app.create_friendship(pers_distances)
 app.create_relation(cons_distances)
 app.create_pc_relation(pers_cons_distances)
 
-<font color="green">\# close the session<\font color="green">
-app.close()```
+# close the session
+app.close()
+```
 
-## 📚🔬 Do not accept other chronology than the time of the oddhours: knowledge ghraphs for literature investigation.
+## 📚🔬 Do not accept other chronology than the time of the oddhours: knowledge ghraphs for literature investigation
 This package introduces a method for literature investigation which aims to construct an objective fundament for futher critical analysis. Disruption of the cualitative **vs** cuantitative dichotomy opens new directions for the Humanities that are attuned to the modern-day worldview: broad, multimodal and stereotype agnostic.
 Knowledge graph is a data structure that can bring together literature and graph theory allowing Digital Humanists to get a fresh sight at the artwork. 
 Just some simple examples to illustrate the potential of conceptual graphs for literature investigation:
